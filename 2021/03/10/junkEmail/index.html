@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/3 | Sakura</title>
+  <title>junkEmail | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="-8000">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sakura">
-<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
+  <meta name="description" content="springboot发送垃圾邮件1.idea使用spring initializr创建springboot工程，勾选I&#x2F;O中的定时器和邮件 2.创建quartz包。包下创建SendEmailQuartz.java@Component@Configurable@EnableSchedulingpublic class SendEmailQuartz {    @Resource    private">
+<meta property="og:type" content="article">
+<meta property="og:title" content="junkEmail">
+<meta property="og:url" content="http://example.com/2021/03/10/junkEmail/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="-8000">
+<meta property="og:description" content="springboot发送垃圾邮件1.idea使用spring initializr创建springboot工程，勾选I&#x2F;O中的定时器和邮件 2.创建quartz包。包下创建SendEmailQuartz.java@Component@Configurable@EnableSchedulingpublic class SendEmailQuartz {    @Resource    private">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210310205945515.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210310213306769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODIwOTY0,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-03-10T13:35:59.000Z">
+<meta property="article:modified_time" content="2021-03-10T13:37:14.132Z">
 <meta property="article:author" content="JF Xia">
+<meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210310205945515.png">
   
     <link rel="alternative" href="/atom.xml" title="Sakura" type="application/atom+xml">
   
@@ -170,36 +176,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-junkEmail" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      junkEmail
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/junkEmail/" class="archive-article-date">
+
+        
+        <a href="/2021/03/10/junkEmail/" class="archive-article-date">
   	<time datetime="2021-03-10T13:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/junkEmail/">junkEmail</a>
-    </h1>
-  
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="springboot发送垃圾邮件"><a href="#springboot发送垃圾邮件" class="headerlink" title="springboot发送垃圾邮件"></a>springboot发送垃圾邮件</h1><h2 id="1-idea使用spring-initializr创建springboot工程，勾选I-O中的定时器和邮件"><a href="#1-idea使用spring-initializr创建springboot工程，勾选I-O中的定时器和邮件" class="headerlink" title="1.idea使用spring initializr创建springboot工程，勾选I/O中的定时器和邮件"></a>1.idea使用spring initializr创建springboot工程，勾选I/O中的定时器和邮件</h2><p><img src="https://img-blog.csdnimg.cn/20210310205945515.png" alt="在这里插入图片描述"></p>
+<h2 id="2-创建quartz包。包下创建SendEmailQuartz-java"><a href="#2-创建quartz包。包下创建SendEmailQuartz-java" class="headerlink" title="2.创建quartz包。包下创建SendEmailQuartz.java"></a>2.创建quartz包。包下创建SendEmailQuartz.java</h2><p>@Component<br>@Configurable<br>@EnableScheduling<br>public class SendEmailQuartz {<br>    @Resource<br>    private EmailService emailService;<br>    //每五秒发送一个<br>    @Scheduled(cron = “*/5 * *  * * * “)<br>    public void send(){<br>        emailService.sendEmail();<br>    }<br>}</p>
+<h2 id="3-创建service包。包中创建EmailService接口"><a href="#3-创建service包。包中创建EmailService接口" class="headerlink" title="3.创建service包。包中创建EmailService接口"></a>3.创建service包。包中创建EmailService接口</h2><p>public interface EmailService {<br>    boolean sendEmail();<br>}</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="4-service包下创建impl包。包中创建相应的impl实现类"><a href="#4-service包下创建impl包。包中创建相应的impl实现类" class="headerlink" title="4.service包下创建impl包。包中创建相应的impl实现类"></a>4.service包下创建impl包。包中创建相应的impl实现类</h2><p>@Service<br>public class EmailServiceImpl implements EmailService {<br>    @Resource<br>    JavaMailSender javaMailSender;<br>    @Value(“${spring.mail.username}”)<br>    private String from;<br>    @Override<br>    public boolean sendEmail() {<br>        try {<br>                MimeMessage mimeMessage=this.javaMailSender.createMimeMessage();<br>                MimeMessageHelper message=new MimeMessageHelper(mimeMessage);<br>                //发送者<br>                message.setFrom(from);<br>                //主题<br>                message.setSubject(“北京窝窝头今日特卖”);<br>                //接受方<br>                message.setTo(“此处填写接收者的邮箱”);<br>                //内容<br>                message.setText(“窝窝头三块一个十块三个!”);<br>                this.javaMailSender.send(mimeMessage);<br>        }catch (Exception e){<br>            return Boolean.FALSE;<br>        }<br>        return Boolean.TRUE;<br>    }<br>}</p>
+<h2 id="5-application-properties中填写如下"><a href="#5-application-properties中填写如下" class="headerlink" title="5.application.properties中填写如下"></a>5.application.properties中填写如下</h2><p>#以网易邮箱为例<br>spring.mail.host=smtp.163.com<br>#发送者邮箱，该邮箱需要开启smtp服务<br>spring.mail.username=此处填写你的邮箱<br>#授权码，邮箱开启smtp服务后会发送给你一个授权码<br>#填入授权码，为一串大写的英文字符<br>spring.mail.password=你邮箱的smtp授权码<br>spring.mail.default-encoding=utf-8<br>spring.mail.properties.mail.smtp.auth=true<br>spring.mail.properties.mail.smtp.starttls.enable=true<br>spring.mail.properties.mail.smtp.starttls.required=true</p>
+<h3 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h3><p><img src="https://img-blog.csdnimg.cn/20210310213306769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODIwOTY0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,210 +253,120 @@
       		
 		</ul>
 	</div>
+     
+      
 
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/10/junkEmail/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/%E5%90%8C%E6%AD%A5%E9%9F%B3%E5%BE%8B%E5%96%B5%E8%B5%9B%E5%85%8B%E7%A0%B4%E8%A7%A3steam%E7%89%88%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-03-10T03:38:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/10/%E5%90%8C%E6%AD%A5%E9%9F%B3%E5%BE%8B%E5%96%B5%E8%B5%9B%E5%85%8B%E7%A0%B4%E8%A7%A3steam%E7%89%88%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">同步音律喵赛克破解steam版教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/%E5%90%8C%E6%AD%A5%E9%9F%B3%E5%BE%8B%E5%96%B5%E8%B5%9B%E5%85%8B%E7%A0%B4%E8%A7%A3steam%E7%89%88%E6%95%99%E7%A8%8B/">同步音律喵赛克破解steam版教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#springboot%E5%8F%91%E9%80%81%E5%9E%83%E5%9C%BE%E9%82%AE%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">springboot发送垃圾邮件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-idea%E4%BD%BF%E7%94%A8spring-initializr%E5%88%9B%E5%BB%BAspringboot%E5%B7%A5%E7%A8%8B%EF%BC%8C%E5%8B%BE%E9%80%89I-O%E4%B8%AD%E7%9A%84%E5%AE%9A%E6%97%B6%E5%99%A8%E5%92%8C%E9%82%AE%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">1.idea使用spring initializr创建springboot工程，勾选I&#x2F;O中的定时器和邮件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BAquartz%E5%8C%85%E3%80%82%E5%8C%85%E4%B8%8B%E5%88%9B%E5%BB%BASendEmailQuartz-java"><span class="toc-number">1.2.</span> <span class="toc-text">2.创建quartz包。包下创建SendEmailQuartz.java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BAservice%E5%8C%85%E3%80%82%E5%8C%85%E4%B8%AD%E5%88%9B%E5%BB%BAEmailService%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text">3.创建service包。包中创建EmailService接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-service%E5%8C%85%E4%B8%8B%E5%88%9B%E5%BB%BAimpl%E5%8C%85%E3%80%82%E5%8C%85%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%9B%B8%E5%BA%94%E7%9A%84impl%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">4.service包下创建impl包。包中创建相应的impl实现类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-application-properties%E4%B8%AD%E5%A1%AB%E5%86%99%E5%A6%82%E4%B8%8B"><span class="toc-number">1.5.</span> <span class="toc-text">5.application.properties中填写如下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">效果：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E8%81%8A%E5%A4%A9%E5%AE%A4/" class="archive-article-date">
-  	<time datetime="2021-03-10T02:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E8%81%8A%E5%A4%A9%E5%AE%A4/">安卓模拟聊天室</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/07/springboot%E9%9B%86%E6%88%90mybatis/" class="archive-article-date">
-  	<time datetime="2021-03-07T06:10:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/07/springboot%E9%9B%86%E6%88%90mybatis/">springboot集成mybatis</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/05/markdown/" class="archive-article-date">
-  	<time datetime="2021-03-05T14:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/05/markdown/">markdown</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/03/FirstBlog/" class="archive-article-date">
-  	<time datetime="2021-03-02T16:06:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/03/FirstBlog/">FirstBlog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -451,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
