@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Sakura</title>
+  <title>docker踩坑笔记 | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="-8000">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sakura">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="docker踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl stop fire">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker踩坑笔记">
+<meta property="og:url" content="http://example.com/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="-8000">
+<meta property="og:description" content="docker踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl stop fire">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png">
+<meta property="article:published_time" content="2021-03-17T00:55:36.000Z">
+<meta property="article:modified_time" content="2021-03-17T01:28:33.426Z">
 <meta property="article:author" content="JF Xia">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png">
   
     <link rel="alternative" href="/atom.xml" title="Sakura" type="application/atom+xml">
   
@@ -170,36 +175,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-docker踩坑笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      docker踩坑笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+
+        
+        <a href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2021-03-17T00:55:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">docker踩坑笔记</a>
-    </h1>
-  
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker踩坑笔记"><a href="#docker踩坑笔记" class="headerlink" title="docker踩坑笔记"></a>docker踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
+<p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
+<p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
+<p>容器不能用，那就把容器移除吧，<code> docker rm mytomcat</code></p>
+<p>这时候该使用另一条命令，<code> docker run -d -p 8888:8080 tomcat</code>，-d表示后台运行，-p表示将8888映射到8080，再刷新页面，发现404~???? 我佛了。</p>
+<p><img src="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png" alt="alt pic"></p>
+<p>这时候该怎么做呢？</p>
+<ul>
+<li>进入tomcat容器，<code> docker exec -it tomcat的id /bin/bash</code> ，其中发现有个webapps和webapps.dist</li>
+<li>进入webapps，<code> cd webapps</code></li>
+<li>查询webapps里的内容，<code> ls -l</code>，这时候出现问题了，这里面是空的。</li>
+<li>返回上一级目录，<code> cd ../</code></li>
+<li>将webapps改名或删除，<code> mv webapps</code> webapps2</li>
+<li>将webapps.dist改为webapps，<code> mv webapps.dist/ webapps</code></li>
+</ul>
+<p>这时候再用你的主机访问你的linux的ip地址加:8888，发现可以使用了，出现了熟悉的tomcat界面。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,362 +260,120 @@
       		
 		</ul>
 	</div>
+     
+      
 
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/" class="archive-article-date">
-  	<time datetime="2021-03-16T00:59:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker搜索超时</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/">docker搜索超时</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">docker踩坑笔记</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/13/springboot%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8demo/" class="archive-article-date">
-  	<time datetime="2021-03-12T16:02:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/13/springboot%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8demo/">springboot异步调用demo</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/12/ActiveMQ%E8%B8%A9%E5%9D%91/" class="archive-article-date">
-  	<time datetime="2021-03-12T12:54:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/12/ActiveMQ%E8%B8%A9%E5%9D%91/">ActiveMQ</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/junkEmail/" class="archive-article-date">
-  	<time datetime="2021-03-10T13:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/junkEmail/">junkEmail</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/%E5%90%8C%E6%AD%A5%E9%9F%B3%E5%BE%8B%E5%96%B5%E8%B5%9B%E5%85%8B%E7%A0%B4%E8%A7%A3steam%E7%89%88%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-03-10T03:38:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/%E5%90%8C%E6%AD%A5%E9%9F%B3%E5%BE%8B%E5%96%B5%E8%B5%9B%E5%85%8B%E7%A0%B4%E8%A7%A3steam%E7%89%88%E6%95%99%E7%A8%8B/">同步音律喵赛克破解steam版教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/10/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E8%81%8A%E5%A4%A9%E5%AE%A4/" class="archive-article-date">
-  	<time datetime="2021-03-10T02:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/10/%E5%AE%89%E5%8D%93%E6%A8%A1%E6%8B%9F%E8%81%8A%E5%A4%A9%E5%AE%A4/">安卓模拟聊天室</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/07/springboot%E9%9B%86%E6%88%90mybatis/" class="archive-article-date">
-  	<time datetime="2021-03-07T06:10:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/07/springboot%E9%9B%86%E6%88%90mybatis/">springboot集成mybatis</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/05/markdown/" class="archive-article-date">
-  	<time datetime="2021-03-05T14:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/05/markdown/">markdown</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/03/FirstBlog/" class="archive-article-date">
-  	<time datetime="2021-03-02T16:06:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/03/FirstBlog/">FirstBlog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -603,8 +411,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

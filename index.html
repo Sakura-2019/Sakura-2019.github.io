@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 9
+    		总文章数 10
 		</nav>
 		<nav>
-			总字数 <span class="post-count">4.7k</span>
+			总字数 <span class="post-count">5.0k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,95 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-docker踩坑笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">docker踩坑笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-17T00:55:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker踩坑笔记"><a href="#docker踩坑笔记" class="headerlink" title="docker踩坑笔记"></a>docker踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
+<p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
+<p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
+<p>容器不能用，那就把容器移除吧，<code> docker rm mytomcat</code></p>
+<p>这时候该使用另一条命令，<code> docker run -d -p 8888:8080 tomcat</code>，-d表示后台运行，-p表示将8888映射到8080，再刷新页面，发现404~???? 我佛了。</p>
+<p><img src="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png" alt="alt pic"></p>
+<p>这时候该怎么做呢？</p>
+<ul>
+<li>进入tomcat容器，<code> docker exec -it tomcat的id /bin/bash</code> ，其中发现有个webapps和webapps.dist</li>
+<li>进入webapps，<code> cd webapps</code></li>
+<li>查询webapps里的内容，<code> ls -l</code>，这时候出现问题了，这里面是空的。</li>
+<li>返回上一级目录，<code> cd ../</code></li>
+<li>将webapps改名或删除，<code> mv webapps</code> webapps2</li>
+<li>将webapps.dist改为webapps，<code> mv webapps.dist/ webapps</code></li>
+</ul>
+<p>这时候再用你的主机访问你的linux的ip地址加:8888，发现可以使用了，出现了熟悉的tomcat界面。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-docker搜索超时" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -997,11 +1086,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1009,11 +1098,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
             
             <div class="clearfix"></div>
