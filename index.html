@@ -196,19 +196,7 @@
 <p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
 <p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
 <p>容器不能用，那就把容器移除吧，<code> docker rm mytomcat</code></p>
-<p>这时候该使用另一条命令，<code> docker run -d -p 8888:8080 tomcat</code>，-d表示后台运行，-p表示将8888映射到8080，再刷新页面，发现404~???? 我佛了。</p>
-<p><img src="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png" alt="alt pic"></p>
-<p>这时候该怎么做呢？</p>
-<ul>
-<li>进入tomcat容器，<code> docker exec -it tomcat的id /bin/bash</code> ，其中发现有个webapps和webapps.dist</li>
-<li>进入webapps，<code> cd webapps</code></li>
-<li>查询webapps里的内容，<code> ls -l</code>，这时候出现问题了，这里面是空的。</li>
-<li>返回上一级目录，<code> cd ../</code></li>
-<li>将webapps改名或删除，<code> mv webapps</code> webapps2</li>
-<li>将webapps.dist改为webapps，<code> mv webapps.dist/ webapps</code></li>
-</ul>
-<p>这时候再用你的主机访问你的linux的ip地址加:8888，发现可以使用了，出现了熟悉的tomcat界面。</p>
-
+        
       
 
       
