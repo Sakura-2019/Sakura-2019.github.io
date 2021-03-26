@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>docker踩坑笔记 | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="docker踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl stop fire">
+  <meta name="description" content="docker tomcat踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl st">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker踩坑笔记">
 <meta property="og:url" content="http://example.com/2021/03/17/docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="docker踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl stop fire">
+<meta property="og:description" content="docker tomcat踩坑笔记linxu使用的是centos7，其他版本可能不会出现如下情况 用 docker run -d --name  mytomcat tomcat创建并运行一个tomcat容器，看起来貌似是可行的，使用 docker ps -a查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。 这时候我先怀疑是不是防火墙，于是用 systemctl st">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/Sakura-2019/img_mark/raw/d41f36735c15a768be58c7aaabf2de525c9a20e0/20210317-1.png">
 <meta property="article:published_time" content="2021-03-17T00:55:36.000Z">
-<meta property="article:modified_time" content="2021-03-17T01:37:04.562Z">
+<meta property="article:modified_time" content="2021-03-26T13:54:39.991Z">
 <meta property="article:author" content="JF Xia">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
@@ -70,7 +70,7 @@
     		总文章数 26
 		</nav>
 		<nav>
-			总字数 <span class="post-count">10.7k</span>
+			总字数 <span class="post-count">10.6k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -195,10 +195,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="docker踩坑笔记"><a href="#docker踩坑笔记" class="headerlink" title="docker踩坑笔记"></a>docker踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
+        <h1 id="docker-tomcat踩坑笔记"><a href="#docker-tomcat踩坑笔记" class="headerlink" title="docker tomcat踩坑笔记"></a>docker tomcat踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
 <p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
 <p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
-<p>容器不能用，那就把容器移除吧，<code> docker rm mytomcat</code></p>
 <span id="more"></span>
 
 <p>这时候该使用另一条命令，<code> docker run -d -p 8888:8080 tomcat</code>，-d表示后台运行，-p表示将8888映射到8080，再刷新页面，发现404~???? 我佛了。</p>
@@ -365,7 +364,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">docker踩坑笔记</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker-tomcat%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">docker tomcat踩坑笔记</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -517,15 +516,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">

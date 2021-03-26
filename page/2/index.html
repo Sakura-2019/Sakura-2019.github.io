@@ -65,7 +65,7 @@
     		总文章数 26
 		</nav>
 		<nav>
-			总字数 <span class="post-count">10.7k</span>
+			总字数 <span class="post-count">10.6k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -577,7 +577,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="docker之mysql的正确使用姿势"><a href="#docker之mysql的正确使用姿势" class="headerlink" title="docker之mysql的正确使用姿势"></a>docker之mysql的正确使用姿势</h1><h3 id="如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行"><a href="#如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行" class="headerlink" title="如果使用常规命令 docker run -d mymysql mysql，这样能创建容器，但是 docker ps -a后发现容器会退出运行"></a>如果使用常规命令<code> docker run -d mymysql mysql</code>，这样能创建容器，但是<code> docker ps -a</code>后发现容器会退出运行</h3><h3 id="为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-dokcer-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306"><a href="#为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-dokcer-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306" class="headerlink" title="为什么呢，使用命令 docker logs mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除， docker rm mymysql，然后使用指令 dokcer run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql ，为其指定端口号为3306"></a>为什么呢，使用命令<code> docker logs mymysql</code>，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，<code> docker rm mymysql</code>，然后使用指令<code> dokcer run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql</code> ，为其指定端口号为3306</h3>
+        <h1 id="docker之mysql的正确使用姿势"><a href="#docker之mysql的正确使用姿势" class="headerlink" title="docker之mysql的正确使用姿势"></a>docker之mysql的正确使用姿势</h1><h3 id="如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行"><a href="#如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行" class="headerlink" title="如果使用常规命令 docker run -d mymysql mysql，这样能创建容器，但是 docker ps -a后发现容器会退出运行"></a>如果使用常规命令<code> docker run -d mymysql mysql</code>，这样能创建容器，但是<code> docker ps -a</code>后发现容器会退出运行</h3><h3 id="为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306"><a href="#为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306" class="headerlink" title="为什么呢，使用命令 docker logs mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除， docker rm mymysql，然后使用指令 docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql ，为其指定端口号为3306"></a>为什么呢，使用命令<code> docker logs mymysql</code>，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，<code> docker rm mymysql</code>，然后使用指令<code> docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql</code> ，为其指定端口号为3306</h3>
         
       
 
@@ -651,10 +651,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="docker踩坑笔记"><a href="#docker踩坑笔记" class="headerlink" title="docker踩坑笔记"></a>docker踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
+        <h1 id="docker-tomcat踩坑笔记"><a href="#docker-tomcat踩坑笔记" class="headerlink" title="docker tomcat踩坑笔记"></a>docker tomcat踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
 <p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
 <p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
-<p>容器不能用，那就把容器移除吧，<code> docker rm mytomcat</code></p>
         
       
 
@@ -1070,15 +1069,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
