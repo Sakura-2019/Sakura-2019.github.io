@@ -577,7 +577,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="docker之mysql的正确使用姿势"><a href="#docker之mysql的正确使用姿势" class="headerlink" title="docker之mysql的正确使用姿势"></a>docker之mysql的正确使用姿势</h1><h3 id="如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行"><a href="#如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行" class="headerlink" title="如果使用常规命令 docker run -d mymysql mysql，这样能创建容器，但是 docker ps -a后发现容器会退出运行"></a>如果使用常规命令<code> docker run -d mymysql mysql</code>，这样能创建容器，但是<code> docker ps -a</code>后发现容器会退出运行</h3><h3 id="为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306"><a href="#为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306" class="headerlink" title="为什么呢，使用命令 docker logs mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除， docker rm mymysql，然后使用指令 docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql ，为其指定端口号为3306"></a>为什么呢，使用命令<code> docker logs mymysql</code>，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，<code> docker rm mymysql</code>，然后使用指令<code> docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码-d mysql</code> ，为其指定端口号为3306</h3>
+        <h1 id="docker之mysql的正确使用姿势"><a href="#docker之mysql的正确使用姿势" class="headerlink" title="docker之mysql的正确使用姿势"></a>docker之mysql的正确使用姿势</h1><h3 id="如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行"><a href="#如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行" class="headerlink" title="如果使用常规命令 docker run -d mymysql mysql，这样能创建容器，但是 docker ps -a后发现容器会退出运行"></a>如果使用常规命令<code> docker run -d mymysql mysql</code>，这样能创建容器，但是<code> docker ps -a</code>后发现容器会退出运行</h3><h3 id="为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306"><a href="#为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306" class="headerlink" title="为什么呢，使用命令 docker logs mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除， docker rm mymysql，然后使用指令 docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码 -d mysql ，为其指定端口号为3306"></a>为什么呢，使用命令<code> docker logs mymysql</code>，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，<code> docker rm mymysql</code>，然后使用指令<code> docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码 -d mysql</code> ，为其指定端口号为3306</h3>
         
       
 
@@ -1069,11 +1069,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
