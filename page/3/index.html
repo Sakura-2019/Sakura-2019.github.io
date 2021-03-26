@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 25
+    		总文章数 26
 		</nav>
 		<nav>
-			总字数 <span class="post-count">10.5k</span>
+			总字数 <span class="post-count">10.6k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-junkEmail" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/10/junkEmail/">junkEmail</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/10/junkEmail/" class="archive-article-date">
+  	<time datetime="2021-03-10T13:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="springboot发送垃圾邮件"><a href="#springboot发送垃圾邮件" class="headerlink" title="springboot发送垃圾邮件"></a>springboot发送垃圾邮件</h1><h2 id="1-idea使用spring-initializr创建springboot工程，勾选I-O中的定时器和邮件"><a href="#1-idea使用spring-initializr创建springboot工程，勾选I-O中的定时器和邮件" class="headerlink" title="1.idea使用spring initializr创建springboot工程，勾选I/O中的定时器和邮件"></a>1.idea使用spring initializr创建springboot工程，勾选I/O中的定时器和邮件</h2><p><img src="https://img-blog.csdnimg.cn/20210310205945515.png" alt="在这里插入图片描述"></p>
+<h2 id="2-创建quartz包。包下创建SendEmailQuartz-java"><a href="#2-创建quartz包。包下创建SendEmailQuartz-java" class="headerlink" title="2.创建quartz包。包下创建SendEmailQuartz.java"></a>2.创建quartz包。包下创建SendEmailQuartz.java</h2><p>@Component<br>@Configurable<br>@EnableScheduling<br>public class SendEmailQuartz {<br>    @Resource<br>    private EmailService emailService;<br>    //每五秒发送一个<br>    @Scheduled(cron = “*/5 * *  * * * “)<br>    public void send(){<br>        emailService.sendEmail();<br>    }<br>}</p>
+<h2 id="3-创建service包。包中创建EmailService接口"><a href="#3-创建service包。包中创建EmailService接口" class="headerlink" title="3.创建service包。包中创建EmailService接口"></a>3.创建service包。包中创建EmailService接口</h2><p>public interface EmailService {<br>    boolean sendEmail();<br>}</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/10/junkEmail/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-同步音律喵赛克破解steam版教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -704,11 +780,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">

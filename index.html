@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 25
+    		总文章数 26
 		</nav>
 		<nav>
-			总字数 <span class="post-count">10.5k</span>
+			总字数 <span class="post-count">10.6k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,96 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-linux安装docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/26/linux%E5%AE%89%E8%A3%85docker/">linux安装docker</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/26/linux%E5%AE%89%E8%A3%85docker/" class="archive-article-date">
+  	<time datetime="2021-03-26T11:53:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>查看centos版本，要求高于3.10</p>
+<p>uname -r </p>
+</li>
+<li><p>升级软件包 </p>
+<p>yum update</p>
+</li>
+<li><p>安装docker</p>
+<p>yum install docker</p>
+</li>
+<li><p>启动docker，若失败则需要设置yum镜像，卸载重新安装docker</p>
+<p>systemctl start docker</p>
+</li>
+<li><p>设置为开机启动</p>
+<p>systemctl enable docker</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/26/linux%E5%AE%89%E8%A3%85docker/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-restCRUD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -914,85 +1004,6 @@
 
 
   
-    <article id="post-MybatisPlus自动填充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/21/MybatisPlus%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/">MybatisPlus自动填充</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/21/MybatisPlus%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/" class="archive-article-date">
-  	<time datetime="2021-03-21T03:38:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数据表中有两个字段，create-time和update-time。"><a href="#数据表中有两个字段，create-time和update-time。" class="headerlink" title="数据表中有两个字段，create_time和update_time。"></a>数据表中有两个字段，create_time和update_time。</h2><h2 id="要实现数据填充，传统方式是用setCreateTime（new-Date-）和setUpdateTime（new-Date-）来实现，但是mybatisplus中提供了自动填充方法。"><a href="#要实现数据填充，传统方式是用setCreateTime（new-Date-）和setUpdateTime（new-Date-）来实现，但是mybatisplus中提供了自动填充方法。" class="headerlink" title="要实现数据填充，传统方式是用setCreateTime（new Date()）和setUpdateTime（new Date()）来实现，但是mybatisplus中提供了自动填充方法。"></a>要实现数据填充，传统方式是用setCreateTime（new Date()）和setUpdateTime（new Date()）来实现，但是mybatisplus中提供了自动填充方法。</h2><p>实体类，注意加上@TableField注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@TableField(fill = FieldFill.INSERT)</span></span><br><span class="line"><span class="keyword">private</span> Date createTime;</span><br><span class="line"><span class="meta">@TableField(fill = FieldFill.INSERT_UPDATE)</span></span><br><span class="line"><span class="keyword">private</span> Date updateTime;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新建一个类，实现MetaObjectHandler</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">MyBatisPlus</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/21/MybatisPlus%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1134,11 +1145,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
