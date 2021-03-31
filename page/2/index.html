@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 28
+    		总文章数 29
 		</nav>
 		<nav>
-			总字数 <span class="post-count">10.7k</span>
+			总字数 <span class="post-count">10.9k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,85 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-MyBatisPlus逻辑删除" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/21/MyBatisPlus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/">MyBatisPlus逻辑删除</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/21/MyBatisPlus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/" class="archive-article-date">
+  	<time datetime="2021-03-21T08:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="物理删除和逻辑删除的区别"><a href="#物理删除和逻辑删除的区别" class="headerlink" title="物理删除和逻辑删除的区别"></a>物理删除和逻辑删除的区别</h1><p>物理删除就是值将数据删除，不复存在，而逻辑删除就是指看起来删除了，实际上没删除，是因为数据表中含有deleted字段，查询的时候如果该值为1表示不显示，，也就是逻辑删除，为0表示显示。</p>
+<ul>
+<li><p>数据表中添加deleted字段名，tinyint类型，默认值0，长度为1。</p>
+</li>
+<li><p>实体类中添加相应字段</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逻辑删除注解</span></span><br><span class="line"><span class="meta">@TableLogic</span></span><br><span class="line"><span class="keyword">private</span> Integer deleted;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">MybatisPlus</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/21/MyBatisPlus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-MyBatisPlus分页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -861,80 +940,6 @@
 
 
   
-    <article id="post-docker搜索超时" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/">docker搜索超时</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/" class="archive-article-date">
-  	<time datetime="2021-03-16T00:59:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-16</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="今天使用docker搜索时发现time-out超时异常，镜像也是配置了的，还需要修改dns才行"><a href="#今天使用docker搜索时发现time-out超时异常，镜像也是配置了的，还需要修改dns才行" class="headerlink" title="今天使用docker搜索时发现time out超时异常，镜像也是配置了的，还需要修改dns才行"></a>今天使用docker搜索时发现time out超时异常，镜像也是配置了的，还需要修改dns才行</h3><h5 id="1-配置镜像：-vi-etc-docker-daemon-json"><a href="#1-配置镜像：-vi-etc-docker-daemon-json" class="headerlink" title="1.配置镜像： vi /etc/docker/daemon.json"></a>1.配置镜像： vi /etc/docker/daemon.json</h5><p>{<br>  “registry-mirrors”: [<br>    “<a target="_blank" rel="noopener" href="https://registry.docker-cn.com&quot;/">https://registry.docker-cn.com&quot;</a><br>  ]<br>}</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1068,6 +1073,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
@@ -1076,15 +1085,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">VM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1096,7 +1097,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">VM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,11 +1129,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
             
             <div class="clearfix"></div>
