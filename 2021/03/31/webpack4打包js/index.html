@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>webpack | Sakura</title>
+  <title>webpack4打包js | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度 创建一个文件夹webpackdemo，使用 npm init -y 命令进行初始化，再使用 npm install -g webpack webpack-cli命令进行webpack的安装  安装好后使用 webpack -v命令进行测试，若输出版本号，则证明安装成功  创建src和dist文件夹，src下">
+  <meta name="description" content="webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度 创建一个文件夹webpackdemo，使用 npm init -y 命令进行初始化，再使用 npm install -g webpack webpack-cli命令进行webpack的安装  安装好后使用 webpack -v命令进行测试，若输出版本号，则证明安装成功  创建src和dist文件夹，src下创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack">
-<meta property="og:url" content="http://example.com/2021/03/31/webpack/index.html">
+<meta property="og:title" content="webpack4打包js">
+<meta property="og:url" content="http://example.com/2021/03/31/webpack4%E6%89%93%E5%8C%85js/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度 创建一个文件夹webpackdemo，使用 npm init -y 命令进行初始化，再使用 npm install -g webpack webpack-cli命令进行webpack的安装  安装好后使用 webpack -v命令进行测试，若输出版本号，则证明安装成功  创建src和dist文件夹，src下">
+<meta property="og:description" content="webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度 创建一个文件夹webpackdemo，使用 npm init -y 命令进行初始化，再使用 npm install -g webpack webpack-cli命令进行webpack的安装  安装好后使用 webpack -v命令进行测试，若输出版本号，则证明安装成功  创建src和dist文件夹，src下创建">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-31T14:24:00.000Z">
-<meta property="article:modified_time" content="2021-03-31T15:35:24.950Z">
+<meta property="article:modified_time" content="2021-03-31T15:44:26.739Z">
 <meta property="article:author" content="JF Xia">
 <meta property="article:tag" content="webpack">
 <meta name="twitter:card" content="summary">
@@ -173,19 +173,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-webpack" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-webpack4打包js" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      webpack
+      webpack4打包js
     </h1>
   
 
         
-        <a href="/2021/03/31/webpack/" class="archive-article-date">
+        <a href="/2021/03/31/webpack4%E6%89%93%E5%8C%85js/" class="archive-article-date">
   	<time datetime="2021-03-31T14:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-31</time>
 </a>
         
@@ -193,55 +193,56 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度"><a href="#webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度" class="headerlink" title="webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度"></a>webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度</h3><ul>
+        <h3 id="webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度"><a href="#webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度" class="headerlink" title="webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度"></a>webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度</h3><ul>
 <li><p>创建一个文件夹webpackdemo，使用<code> npm init -y</code> 命令进行初始化，再使用<code> npm install -g webpack webpack-cli</code>命令进行webpack的安装</p>
 </li>
 <li><p>安装好后使用<code> webpack -v</code>命令进行测试，若输出版本号，则证明安装成功</p>
 </li>
 <li><p>创建src和dist文件夹，src下创建三个js文件</p>
-<span id="more"></span>
+</li>
+</ul>
+ <span id="more"></span>
 
-<p>common.js</p>
+<p>  common.js</p>
 <blockquote>
 <p>exports.info=function (str){</p>
-<p>  document.write(str)</p>
+<p>document.write(str)</p>
 <p>}</p>
 </blockquote>
-<p>utils.js</p>
+<p>  utils.js</p>
 <blockquote>
 <p>exports.add=function (a,b){</p>
-<p>  return a+b</p>
+<p>return a+b</p>
 <p>}</p>
 </blockquote>
-<p>index.js，引入了前两个js，并进行调用</p>
+<p>  index.js，引入了前两个js，并进行调用</p>
 <blockquote>
 <p>const common = require(‘./common’)</p>
 <p>const utils = require(‘./utils’)</p>
 <p>common.info(“hello common “+utils.add(1,2))</p>
 </blockquote>
-</li>
+<ul>
 <li><p>src下再创建webpack.config.js配置文件，文件名固定，填充如下</p>
 <blockquote>
 <p>const path=require(“path”)//node.js内置模块</p>
 <p>module.exports={</p>
-<p>  entry: ‘./src/main.js’,//入口文件</p>
-<p>  output: {</p>
-<p>​    path: path.resolve(__dirname,’./dist’),//输出路径，_dirname表示当前文件所在路径</p>
-<p>​    filename: ‘main.js’//打包后的文件名</p>
-<p>  }</p>
+<p>entry: ‘./src/main.js’,//入口文件</p>
+<p>output: {</p>
+<p> path: path.resolve(__dirname,’./dist’),//输出路径，_dirname表示当前文件所在路径</p>
+<p> filename: ‘main.js’//打包后的文件名</p>
+<p>}</p>
 <p>}</p>
 </blockquote>
 </li>
-<li><p>我的webpack版本是4，这个版本配置中的entry会默认指定src下的index.js，入口文件名需要为index.js，不能为其他名字，如main.js。不然会出错！查了好久最终在stack overflow上找到了答案,github上提交issues去问的人也非常多！注意！</p>
+<li><p>我的webpack版本是<strong>4</strong>，这个版本配置中的entry会默认指定src下的index.js，<strong>入口文件名需要为index.js，不能为其他名字</strong>，如main.js。不然会出错！查了好久最终在stack overflow上找到了答案,github上提交issues去问的人也非常多！注意！</p>
 </li>
-<li><p>使用<code> webpack --mode=development</code>命令进行打包，dist目录下会多一个js文件，里面是一长串已经打包好了的看不懂的东西</p>
+<li><p>直接使用<code>webpack</code>命令进行打包，也可以指定使用另一个命令<code> webpack --mode=development</code>指定mode，dist目录下会多一个js文件，里面是一长串已经打包好了的看不懂的东西</p>
 <blockquote>
 <p>(()=&gt;{var o={648:(o,n)=&gt;{n.info=function(o){document.write(o)}},555:(o,n)=&gt;{n.add=function(o,n){return o+n}}},n={};function r(t){var e=n[t];if(void 0!==e)return e.exports;var i=n[t]={exports:{}};return o<a href="i,i.exports,r">t</a>,i.exports}(()=&gt;{const o=r(648),n=r(555);o.info(“hello common “+n.add(1,2))})()})();</p>
 </blockquote>
 </li>
 <li><p>开始进行测试，在文件夹webpackdemo下创建01.html，引入刚才打包好的js文件</p>
-<blockquote>
-<script src="dist/main.js"></script></blockquote>
+<p><code>&lt;script src=&quot;dist/main.js&quot;&gt;&lt;/script&gt;</code></p>
 </li>
 <li><p>运行html，在浏览器中查看，发现有输出，测试成功，输出内容如下</p>
 <blockquote>
@@ -349,7 +350,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/31/webpack/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/31/webpack4%E6%89%93%E5%8C%85js/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -392,7 +393,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack%E5%8F%AF%E4%BB%A5%E5%B0%86js%E3%80%81css%E7%AD%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85%E6%88%90%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E5%87%8F%E5%B0%91%E4%BA%86%E8%AF%B7%E6%B1%82%E6%AC%A1%E6%95%B0%EF%BC%8C%E6%8F%90%E9%AB%98%E7%BD%91%E9%A1%B5%E8%BF%90%E8%A1%8C%E9%80%9F%E5%BA%A6"><span class="toc-number">1.</span> <span class="toc-text">webpack可以将js、css等静态资源打包成一个文件，减少了请求次数，提高网页运行速度</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack%E5%8F%AF%E4%BB%A5%E5%B0%86js%E3%80%81css%E7%AD%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%89%93%E5%8C%85%E6%88%90%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E5%87%8F%E5%B0%91%E4%BA%86%E8%AF%B7%E6%B1%82%EF%BC%8C%E6%8F%90%E9%AB%98%E7%BD%91%E9%A1%B5%E8%BF%90%E8%A1%8C%E9%80%9F%E5%BA%A6"><span class="toc-number">1.</span> <span class="toc-text">webpack可以将js、css等静态资源打包成一个文件，减少了请求，提高网页运行速度</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -544,11 +545,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,11 +593,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
