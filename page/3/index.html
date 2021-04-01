@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 30
+    		总文章数 31
 		</nav>
 		<nav>
-			总字数 <span class="post-count">11.4k</span>
+			总字数 <span class="post-count">11.5k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,80 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-docker之mysql的正确使用姿势" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/17/docker%E4%B9%8Bmysql%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/">docker之mysql的正确使用姿势</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/17/docker%E4%B9%8Bmysql%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" class="archive-article-date">
+  	<time datetime="2021-03-17T02:26:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker之mysql的正确使用姿势"><a href="#docker之mysql的正确使用姿势" class="headerlink" title="docker之mysql的正确使用姿势"></a>docker之mysql的正确使用姿势</h1><h3 id="如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行"><a href="#如果使用常规命令-docker-run-d-mymysql-mysql，这样能创建容器，但是-docker-ps-a后发现容器会退出运行" class="headerlink" title="如果使用常规命令 docker run -d mymysql mysql，这样能创建容器，但是 docker ps -a后发现容器会退出运行"></a>如果使用常规命令<code> docker run -d mymysql mysql</code>，这样能创建容器，但是<code> docker ps -a</code>后发现容器会退出运行</h3><h3 id="为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306"><a href="#为什么呢，使用命令-docker-logs-mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，-docker-rm-mymysql，然后使用指令-docker-run-p-3306-3306-name-mymysql-e-MYSQL-ROOT-PASSWORD-你想好的密码-d-mysql-，为其指定端口号为3306" class="headerlink" title="为什么呢，使用命令 docker logs mymysql，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除， docker rm mymysql，然后使用指令 docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码 -d mysql ，为其指定端口号为3306"></a>为什么呢，使用命令<code> docker logs mymysql</code>，查看日志，会发现启动mysql容器时需要指定密码，这时候先将mymysql容器移除，<code> docker rm mymysql</code>，然后使用指令<code> docker run -p 3306:3306 --name mymysql -e MYSQL_ROOT_PASSWORD=你想好的密码 -d mysql</code> ，为其指定端口号为3306</h3>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/17/docker%E4%B9%8Bmysql%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-docker tomcat踩坑笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -866,83 +940,9 @@
 
 
   
-    <article id="post-FirstBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/03/FirstBlog/">FirstBlog</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/03/FirstBlog/" class="archive-article-date">
-  	<time datetime="2021-03-02T16:06:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-03</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="2021-03-03使用hexo静态博客框架-github-io域名，个人博客搭建成功记录"><a href="#2021-03-03使用hexo静态博客框架-github-io域名，个人博客搭建成功记录" class="headerlink" title="2021-03-03使用hexo静态博客框架+*.github.io域名，个人博客搭建成功记录"></a>2021-03-03使用hexo静态博客框架+*.github.io域名，个人博客搭建成功记录</h2><h2 id="1-安装node-js-，-hexo"><a href="#1-安装node-js-，-hexo" class="headerlink" title="1.安装node.js ， hexo"></a>1.安装node.js ， hexo</h2><h2 id="2-cmd打开，hexo-init-“文件名”，-文件名为自己的博客名，如myblog"><a href="#2-cmd打开，hexo-init-“文件名”，-文件名为自己的博客名，如myblog" class="headerlink" title="2.cmd打开，hexo init “文件名”， 文件名为自己的博客名，如myblog"></a>2.cmd打开，hexo init “文件名”， 文件名为自己的博客名，如myblog</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/03/FirstBlog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1081,11 +1081,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1101,11 +1101,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">babel</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1125,11 +1125,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
