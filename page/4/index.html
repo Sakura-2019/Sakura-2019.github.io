@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 38
+    		总文章数 40
 		</nav>
 		<nav>
-			总字数 <span class="post-count">13.6k</span>
+			总字数 <span class="post-count">14.0k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,156 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-docker tomcat踩坑笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/17/docker%20tomcat%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">docker tomcat踩坑笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/17/docker%20tomcat%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-03-17T00:55:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="docker-tomcat踩坑笔记"><a href="#docker-tomcat踩坑笔记" class="headerlink" title="docker tomcat踩坑笔记"></a>docker tomcat踩坑笔记</h1><p><em><strong>linxu使用的是centos7，其他版本可能不会出现如下情况</strong></em></p>
+<p>用<code> docker run -d --name  mytomcat tomcat</code>创建并运行一个tomcat容器，看起来貌似是可行的，使用<code> docker ps -a</code>查看发现容器也是运行起来了，但是当使用ip地址加端口号去访问的时候却发现不能用。</p>
+<p>这时候我先怀疑是不是防火墙，于是用<code> systemctl stop firewalld</code>永久关闭防火墙，<code> systemctl status firewalld</code>查看防火墙状态发现已经关闭，于是再刷新页面，发现还是不能用ip+端口访问tomcat。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/17/docker%20tomcat%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-docker搜索超时" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/">docker搜索超时</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/" class="archive-article-date">
+  	<time datetime="2021-03-16T00:59:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-16</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="今天使用docker搜索时发现time-out超时异常，镜像也是配置了的，还需要修改dns才行"><a href="#今天使用docker搜索时发现time-out超时异常，镜像也是配置了的，还需要修改dns才行" class="headerlink" title="今天使用docker搜索时发现time out超时异常，镜像也是配置了的，还需要修改dns才行"></a>今天使用docker搜索时发现time out超时异常，镜像也是配置了的，还需要修改dns才行</h3><h5 id="1-配置镜像：-vi-etc-docker-daemon-json"><a href="#1-配置镜像：-vi-etc-docker-daemon-json" class="headerlink" title="1.配置镜像： vi /etc/docker/daemon.json"></a>1.配置镜像： vi /etc/docker/daemon.json</h5><p>{<br>  “registry-mirrors”: [<br>    “<a target="_blank" rel="noopener" href="https://registry.docker-cn.com&quot;/">https://registry.docker-cn.com&quot;</a><br>  ]<br>}</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/16/docker%E6%90%9C%E7%B4%A2%E8%B6%85%E6%97%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-springboot异步调用demo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -932,11 +1082,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -948,7 +1098,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -956,15 +1106,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">axios</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -976,11 +1126,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -996,19 +1154,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">api</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
             
             <div class="clearfix"></div>
