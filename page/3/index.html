@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 42
+    		总文章数 44
 		</nav>
 		<nav>
-			总字数 <span class="post-count">15.0k</span>
+			总字数 <span class="post-count">15.7k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,181 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-mybatis-resultMap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/25/mybatis-resultMap/">mybatis-resultMap</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/25/mybatis-resultMap/" class="archive-article-date">
+  	<time datetime="2021-03-25T07:36:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>实例 1 普通</li>
+</ul>
+<blockquote>
+<p>&lt; select id=”queryOrderAll” resultMap=”orderResultMap” &gt;</p>
+<p>​    SELECT id, user_id,</p>
+<p>​    number,</p>
+<p>​    createtime, note FROM <code>order</code></p>
+</select>
+
+
+
+<resultMap type="order" id="orderResultMap">
+
+<p>​    <id property="id" column="id" /></p>
+<p>​    <result property="userId" column="user_id" /></p>
+<p>​    <result property="number" column="number" /></p>
+<p>​    <result property="createtime" column="createtime" /></p>
+<p>​    <result property="note" column="note" /></p>
+</resultMap>
+</blockquote>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/25/mybatis-resultMap/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-VM装macOS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/23/VM%E8%A3%85macOS/">VM装macOS</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/23/VM%E8%A3%85macOS/" class="archive-article-date">
+  	<time datetime="2021-03-23T12:43:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-23</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>准备VMware、Unlocker软件和macOS镜像文件，Unlocker的根目录安装位置不能有中文</li>
+<li>关杀毒软件，保持网络通畅，不要运行VMware！管理员方式运行Unlocker目录中的win-install.cmd</li>
+<li>打开VMware新建虚拟机，选择macOS镜像，选择对应版本，网络选桥接</li>
+<li>新建好后不要立马启动！打开保存虚拟机文件的位置，编辑.vmx文件，最后一行加上smc.version=0，保存</li>
+<li>启动macOS系统的虚拟机，选择语言后，给磁盘分两个区，一个名macos存放系统，一个名software存放软件，macos的空间要尽可能大，因为就10.15版本来说，安装空间需要25G以上，系统安装在macos盘中</li>
+<li>分完区后，开始安装，接下来就是简单的设置了。OK，可以使用了！</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">VM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/23/VM%E8%A3%85macOS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-mybatis-plus-generator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -787,156 +962,6 @@
 
 
   
-    <article id="post-mybatis传入json" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/20/mybatis%E4%BC%A0%E5%85%A5json/">mybatis传入json</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/20/mybatis%E4%BC%A0%E5%85%A5json/" class="archive-article-date">
-  	<time datetime="2021-03-20T11:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="mybatis通过json传给controller"><a href="#mybatis通过json传给controller" class="headerlink" title="mybatis通过json传给controller"></a>mybatis通过json传给controller</h3><h4 id="model"><a href="#model" class="headerlink" title="model"></a>model</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUsername</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUsername</span><span class="params">(String username)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.username = username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPassword</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPassword</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.password = password;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="dao"><a href="#dao" class="headerlink" title="dao"></a>dao</h4>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/20/mybatis%E4%BC%A0%E5%85%A5json/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-spirngboot-常用yml配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/20/spirngboot-%E5%B8%B8%E7%94%A8yml%E9%85%8D%E7%BD%AE/">spirngboot-常用yml配置</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/20/spirngboot-%E5%B8%B8%E7%94%A8yml%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-03-20T07:23:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="端口号、数据源、thymeleaf、redis、email、activemq、mybaits、pageHelper、log4J、Loggers"><a href="#端口号、数据源、thymeleaf、redis、email、activemq、mybaits、pageHelper、log4J、Loggers" class="headerlink" title="端口号、数据源、thymeleaf、redis、email、activemq、mybaits、pageHelper、log4J、Loggers"></a>端口号、数据源、thymeleaf、redis、email、activemq、mybaits、pageHelper、log4J、Loggers</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/20/spirngboot-%E5%B8%B8%E7%94%A8yml%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -1075,11 +1100,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1095,10 +1128,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">axios</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">babel</a>
               </li>
              
@@ -1107,15 +1136,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1151,7 +1184,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1159,7 +1192,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">api</a>
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
