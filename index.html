@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 44
+    		总文章数 45
 		</nav>
 		<nav>
-			总字数 <span class="post-count">15.7k</span>
+			总字数 <span class="post-count">16.0k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,106 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-微信扫码登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/07/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/">微信扫码登录</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/07/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2021-05-07T11:50:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-07</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>注册开发者资质<ul>
+<li>支持企业类型</li>
+<li>注册之后，提供微信id和微信秘钥</li>
+</ul>
+</li>
+<li>申请网站应用名称</li>
+<li>需要域名地址</li>
+</ul>
+<h3 id="生成微信二维码"><a href="#生成微信二维码" class="headerlink" title="生成微信二维码"></a>生成微信二维码</h3><p>原理：直接请求微信提供固定的地址，向地址后面拼接参数</p>
+<ul>
+<li>配置文件添加配置：微信id，秘钥和域名地址</li>
+<li>创建类读取配置文件的内容</li>
+</ul>
+<h3 id="获取微信个人信息"><a href="#获取微信个人信息" class="headerlink" title="获取微信个人信息"></a>获取微信个人信息</h3><ul>
+<li>扫描二维码之后，执行本地的callback方法，在callback获取两个值state和code，在跳转时候传递过来</li>
+<li>通过获取到的code值请求微信提供的固定地址，获取access_token访问凭证和openid每个微信唯一标识</li>
+<li>用access_token和openid再去请求一个微信提供的固定地址，最终得到扫描人信息。</li>
+</ul>
+<h3 id="信息显示"><a href="#信息显示" class="headerlink" title="信息显示"></a>信息显示</h3><ul>
+<li><p>在首页从cookie获取数据显示</p>
+</li>
+<li><p>因为cookie无法实现跨域访问，所以根据微信信息使用jwt，生成token字符串，将token通过url传递到首页面</p>
+</li>
+<li><p>将token放cookie的header中，根据token值获取用户信息，再将这些信息放cookie中。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">wechat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/07/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-MD5工具类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -858,83 +958,6 @@
 
 
   
-    <article id="post-swagger错误处理笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/18/swagger%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/">swagger错误处理笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/18/swagger%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-18T13:42:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-18</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Swagger-UI弹框提示Unable-to-infer-base-url-This-is-common-when-using-dynamic-servlet-registration"><a href="#Swagger-UI弹框提示Unable-to-infer-base-url-This-is-common-when-using-dynamic-servlet-registration" class="headerlink" title="Swagger-UI弹框提示Unable to infer base url. This is common when using dynamic servlet registration"></a>Swagger-UI弹框提示Unable to infer base url. This is common when using dynamic servlet registration</h3><h5 id="1、清除chrome缓存"><a href="#1、清除chrome缓存" class="headerlink" title="1、清除chrome缓存"></a>1、清除chrome缓存</h5><ul>
-<li>设置-&gt;清除浏览数据-&gt;基本-&gt;缓存的图片和文件</li>
-</ul>
-<h5 id="2、主入口Application添加-EnableSwagger2注解"><a href="#2、主入口Application添加-EnableSwagger2注解" class="headerlink" title="2、主入口Application添加@EnableSwagger2注解"></a>2、主入口Application添加@EnableSwagger2注解</h5><p>​    </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swagger</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/18/swagger%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1077,6 +1100,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
@@ -1089,7 +1120,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1101,10 +1132,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
@@ -1113,15 +1140,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1129,11 +1152,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1149,11 +1172,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1170,6 +1193,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
               </li>
             
             <div class="clearfix"></div>

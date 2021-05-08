@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 44
+    		总文章数 45
 		</nav>
 		<nav>
-			总字数 <span class="post-count">15.7k</span>
+			总字数 <span class="post-count">16.0k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,111 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-restCRUD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/25/restCRUD/">restCRUD</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/25/restCRUD/" class="archive-article-date">
+  	<time datetime="2021-03-25T11:30:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1）、RestfulCRUD：CRUD满足Rest风格；</p>
+<p>URI：  /资源名称/资源标识       HTTP请求方式区分对资源CRUD操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">普通CRUD（uri来区分操作）</th>
+<th align="center">RestfulCRUD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">查询</td>
+<td align="center">getEmp</td>
+<td align="center">emp—GET</td>
+</tr>
+<tr>
+<td align="center">添加</td>
+<td align="center">addEmp?xxx</td>
+<td align="center">emp—POST</td>
+</tr>
+<tr>
+<td align="center">修改</td>
+<td align="center">updateEmp?id=xxx&amp;xxx=xx</td>
+<td align="center">emp/{id}—PUT</td>
+</tr>
+<tr>
+<td align="center">删除</td>
+<td align="center">deleteEmp?id=1</td>
+<td align="center">emp/{id}—DELETE</td>
+</tr>
+</tbody></table>
+<p>2）、实验的请求架构;</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CRUD</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/25/restCRUD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-mybatis-resultMap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -888,80 +993,6 @@
 
 
   
-    <article id="post-MybaitsPlus入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/20/MybaitsPlus%E5%85%A5%E9%97%A8/">MybaitsPlus入门</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/20/MybaitsPlus%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2021-03-20T15:37:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-20</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="初学MybatisPlus"><a href="#初学MybatisPlus" class="headerlink" title="初学MybatisPlus"></a>初学MybatisPlus</h1><h3 id="mybatisplus可以像jpa那样不用写sql语句和xml，自带了很多curd方法。想要完成crud，在普通的mybatis中需要model，dao，service，serviceImpl，mapper-xml，xml中还要写sql语句。但是mybatisplus只需要dao-model，即可进行crud操作。"><a href="#mybatisplus可以像jpa那样不用写sql语句和xml，自带了很多curd方法。想要完成crud，在普通的mybatis中需要model，dao，service，serviceImpl，mapper-xml，xml中还要写sql语句。但是mybatisplus只需要dao-model，即可进行crud操作。" class="headerlink" title="mybatisplus可以像jpa那样不用写sql语句和xml，自带了很多curd方法。想要完成crud，在普通的mybatis中需要model，dao，service，serviceImpl，mapper.xml，xml中还要写sql语句。但是mybatisplus只需要dao,model，即可进行crud操作。"></a>mybatisplus可以像jpa那样不用写sql语句和xml，自带了很多curd方法。想要完成crud，在普通的mybatis中需要model，dao，service，serviceImpl，mapper.xml，xml中还要写sql语句。但是mybatisplus只需要dao,model，即可进行crud操作。</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">MybatisPlus</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/20/MybaitsPlus%E5%85%A5%E9%97%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -1104,6 +1135,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
@@ -1116,7 +1155,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1128,10 +1167,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
@@ -1140,15 +1175,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1156,11 +1187,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1176,11 +1207,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1197,6 +1228,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
               </li>
             
             <div class="clearfix"></div>
