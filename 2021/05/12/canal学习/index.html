@@ -15,13 +15,11 @@
 <meta property="og:site_name" content="Sakura">
 <meta property="og:description" content="canal可以实现两个不同数据库之间的表的同步 登录查询myql：show variables like ‘log_bin’;若值为on表示已经开启  服务器端创建一个数据库一个表，本地端创建同样的数据库和表  添加相关权限 grant show view,select,replication slave,replication client on *.* to &#39;root&#39;@&amp;#">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png">
 <meta property="article:published_time" content="2021-05-12T15:10:15.000Z">
-<meta property="article:modified_time" content="2021-05-12T15:54:57.191Z">
+<meta property="article:modified_time" content="2021-05-12T16:04:12.330Z">
 <meta property="article:author" content="JF Xia">
 <meta property="article:tag" content="canal">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png">
   
     <link rel="alternative" href="/atom.xml" title="Sakura" type="application/atom+xml">
   
@@ -209,14 +207,18 @@
 <span id="more"></span></li>
 <li><p><code>tar zxvf 压缩包名</code>进行解压</p>
 </li>
-<li><p> 修改canal配置文件</p>
-</li>
-</ul>
-<p>  <code>cd conf/example</code></p>
-<p>  <code> vi instance.properties</code></p>
-<p>  <img src="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png" alt="alt pic"></p>
+<li><p>修改canal配置文件</p>
+<p><code>cd conf/example</code></p>
+<p><code> vi instance.properties</code></p>
 <ul>
-<li>回到主界面启动canal工具</li>
+<li> 修改mysql地址</li>
+<li>修改有权限用户名</li>
+<li>修改密码</li>
+<li>设置canal.instance.filter.regex=<code>.*\\..*</code></li>
+</ul>
+</li>
+<li><p>回到主界面启动canal工具</p>
+</li>
 </ul>
 <p><code>cd / </code></p>
 <p><code>cd bin</code></p>
@@ -528,11 +530,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,10 +550,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">canal</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
@@ -556,7 +558,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+                <a href="javascript:void(0)" class="js-tag color1">canal</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -568,11 +570,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,11 +622,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">api</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
             
             <div class="clearfix"></div>
