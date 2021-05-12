@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 45
+    		总文章数 46
 		</nav>
 		<nav>
-			总字数 <span class="post-count">16.0k</span>
+			总字数 <span class="post-count">16.1k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,90 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-canal学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/12/canal%E5%AD%A6%E4%B9%A0/">canal学习</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/12/canal%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-05-12T15:10:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="canal可以实现两个不同数据库之间的表的同步"><a href="#canal可以实现两个不同数据库之间的表的同步" class="headerlink" title="canal可以实现两个不同数据库之间的表的同步"></a>canal可以实现两个不同数据库之间的表的同步</h3><ul>
+<li><p>登录查询myql：show variables like ‘log_bin’;若值为on表示已经开启</p>
+</li>
+<li><p>服务器端创建一个数据库一个表，本地端创建同样的数据库和表</p>
+</li>
+<li><p>添加相关权限</p>
+<p><code>grant show view,select,replication slave,replication client on *.* to &#39;root&#39;@&#39;%&#39;;</code></p>
+<p><code>flush privileges;</code></p>
+</li>
+<li><p>下载canal 1.14.tar.gz</p>
+<p><a target="_blank" rel="noopener" href="https://github.91chifun.workers.dev/https://github.com//alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz">https://github.91chifun.workers.dev/https://github.com//alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz</a></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">canal</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/12/canal%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-微信扫码登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -881,83 +965,6 @@
 
 
   
-    <article id="post-nginx配置请求转发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/19/nginx%E9%85%8D%E7%BD%AE%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91/">nginx配置请求转发</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/19/nginx%E9%85%8D%E7%BD%AE%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2021-04-19T01:40:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-19</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Windows版"><a href="#Windows版" class="headerlink" title="Windows版"></a>Windows版</h4><h5 id="启动nginx：cmd命令，cd至nginx安装目录，输入nginx-exe进行运行"><a href="#启动nginx：cmd命令，cd至nginx安装目录，输入nginx-exe进行运行" class="headerlink" title="启动nginx：cmd命令，cd至nginx安装目录，输入nginx.exe进行运行"></a>启动nginx：cmd命令，cd至nginx安装目录，输入nginx.exe进行运行</h5><h5 id="停止nginx：cmd命令，cd至nginx安装目录，输入nginx-exe-s-stop"><a href="#停止nginx：cmd命令，cd至nginx安装目录，输入nginx-exe-s-stop" class="headerlink" title="停止nginx：cmd命令，cd至nginx安装目录，输入nginx.exe -s stop"></a>停止nginx：cmd命令，cd至nginx安装目录，输入nginx.exe -s stop</h5><ul>
-<li><p>打开nginx安装目录下的conf-&gt;nginx.conf</p>
-</li>
-<li><p>http-&gt;server-&gt;listen，将80改为81</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/19/nginx%E9%85%8D%E7%BD%AE%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1104,10 +1111,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MyBatisPlus</a>
               </li>
              
@@ -1124,11 +1127,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">canal</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">babel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1168,6 +1179,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">swagger</a>
               </li>
              
@@ -1176,11 +1191,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1188,15 +1203,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">api</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
+                <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
             
             <div class="clearfix"></div>

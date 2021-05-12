@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>linux安装docker | Sakura</title>
+  <title>canal学习 | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看centos版本，要求高于3.10 uname -r   升级软件包  yum update  安装docker yum install docker  启动docker，若失败则需要设置yum镜像，卸载重新安装docker systemctl start docker  设置为开机启动 systemctl enable docker">
+  <meta name="description" content="canal可以实现两个不同数据库之间的表的同步 登录查询myql：show variables like ‘log_bin’;若值为on表示已经开启  服务器端创建一个数据库一个表，本地端创建同样的数据库和表  添加相关权限 grant show view,select,replication slave,replication client on *.* to &#39;root&#39;@&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux安装docker">
-<meta property="og:url" content="http://example.com/2021/03/26/linux%E5%AE%89%E8%A3%85docker/index.html">
+<meta property="og:title" content="canal学习">
+<meta property="og:url" content="http://example.com/2021/05/12/canal%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="查看centos版本，要求高于3.10 uname -r   升级软件包  yum update  安装docker yum install docker  启动docker，若失败则需要设置yum镜像，卸载重新安装docker systemctl start docker  设置为开机启动 systemctl enable docker">
+<meta property="og:description" content="canal可以实现两个不同数据库之间的表的同步 登录查询myql：show variables like ‘log_bin’;若值为on表示已经开启  服务器端创建一个数据库一个表，本地端创建同样的数据库和表  添加相关权限 grant show view,select,replication slave,replication client on *.* to &#39;root&#39;@&amp;#">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-26T11:53:43.000Z">
-<meta property="article:modified_time" content="2021-03-26T13:51:53.262Z">
+<meta property="og:image" content="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png">
+<meta property="article:published_time" content="2021-05-12T15:10:15.000Z">
+<meta property="article:modified_time" content="2021-05-12T15:54:57.191Z">
 <meta property="article:author" content="JF Xia">
-<meta property="article:tag" content="docker">
+<meta property="article:tag" content="canal">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png">
   
     <link rel="alternative" href="/atom.xml" title="Sakura" type="application/atom+xml">
   
@@ -173,48 +175,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linux安装docker" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-canal学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      linux安装docker
+      canal学习
     </h1>
   
 
         
-        <a href="/2021/03/26/linux%E5%AE%89%E8%A3%85docker/" class="archive-article-date">
-  	<time datetime="2021-03-26T11:53:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
+        <a href="/2021/05/12/canal%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-05-12T15:10:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
 </a>
         
       </header>    
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>查看centos版本，要求高于3.10</p>
-<p>uname -r </p>
+        <h3 id="canal可以实现两个不同数据库之间的表的同步"><a href="#canal可以实现两个不同数据库之间的表的同步" class="headerlink" title="canal可以实现两个不同数据库之间的表的同步"></a>canal可以实现两个不同数据库之间的表的同步</h3><ul>
+<li><p>登录查询myql：show variables like ‘log_bin’;若值为on表示已经开启</p>
 </li>
-<li><p>升级软件包 </p>
-<p>yum update</p>
+<li><p>服务器端创建一个数据库一个表，本地端创建同样的数据库和表</p>
 </li>
-<li><p>安装docker</p>
-<p>yum install docker</p>
+<li><p>添加相关权限</p>
+<p><code>grant show view,select,replication slave,replication client on *.* to &#39;root&#39;@&#39;%&#39;;</code></p>
+<p><code>flush privileges;</code></p>
 </li>
-<li><p>启动docker，若失败则需要设置yum镜像，卸载重新安装docker</p>
-<p>systemctl start docker</p>
+<li><p>下载canal 1.14.tar.gz</p>
+<p><a target="_blank" rel="noopener" href="https://github.91chifun.workers.dev/https://github.com//alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz">https://github.91chifun.workers.dev/https://github.com//alibaba/canal/releases/download/canal-1.1.4/canal.deployer-1.1.4.tar.gz</a></p>
+<span id="more"></span></li>
+<li><p><code>tar zxvf 压缩包名</code>进行解压</p>
 </li>
-<li><p>设置为开机启动</p>
-<p>systemctl enable docker</p>
+<li><p> 修改canal配置文件</p>
 </li>
 </ul>
-<span id="more"></span>
-
-<p>进入容器后需要退出容器，不然会卡住，任何命令都出现command not found：ctrl+p+q</p>
-<p>常用镜像 docker pull:</p>
-<p>mongo    docker    rabbitmq    mysql    zookeeper     tomcat    nginx    zookeeper    redis    php    python    maven    elasticsearch:7.11.1    primetoninc/jdk:1.8</p>
+<p>  <code>cd conf/example</code></p>
+<p>  <code> vi instance.properties</code></p>
+<p>  <img src="https://gitee.com/Sakura-2019/img_mark/raw/9889a34a04982fb25481e9f0cfb5fb9410e5177e/20210512-1.png" alt="alt pic"></p>
+<ul>
+<li>回到主界面启动canal工具</li>
+</ul>
+<p><code>cd / </code></p>
+<p><code>cd bin</code></p>
+<p><code>./startup.sh</code></p>
+<ul>
+<li>命令<code>./stop.sh</code> 可关闭</li>
+</ul>
 
       
 
@@ -259,7 +268,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">canal</a>
         		</li>
       		
 		</ul>
@@ -315,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/26/linux%E5%AE%89%E8%A3%85docker/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/12/canal%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -329,18 +338,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/29/vue%E8%B7%AF%E7%94%B1demo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue路由demo
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/25/restCRUD/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">restCRUD</div>
+    <a href="/2021/05/07/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信扫码登录</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -367,7 +367,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#canal%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E9%97%B4%E7%9A%84%E8%A1%A8%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="toc-number">1.</span> <span class="toc-text">canal可以实现两个不同数据库之间的表的同步</span></a></li></ol>
                     </div>
                 </span>
             </div>
