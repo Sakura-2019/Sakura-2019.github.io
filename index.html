@@ -62,7 +62,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 46
+    		总文章数 47
 		</nav>
 		<nav>
 			总字数 <span class="post-count">16.3k</span>
@@ -171,6 +171,93 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-linux配置maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/15/linux%E9%85%8D%E7%BD%AEmaven/">linux配置maven</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/15/linux%E9%85%8D%E7%BD%AEmaven/" class="archive-article-date">
+  	<time datetime="2021-05-15T07:00:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-15</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="和jdk相似的步骤"><a href="#和jdk相似的步骤" class="headerlink" title="和jdk相似的步骤"></a>和jdk相似的步骤</h1><ul>
+<li><p>下载tar包</p>
+</li>
+<li><p>/目录下创建maven文件夹，解压至此</p>
+</li>
+<li><p>vi /etc/profile，添加配置</p>
+<p>export MAVEN_HOME=/maven/apache-maven-3.8.1<br>export PATH=$PATH:%$MAVEN_HOME/bin</p>
+</li>
+<li><p>刷新配置<br>source  /etc/profile</p>
+</li>
+<li><p>测试</p>
+<p><code> maven -v</code></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/15/linux%E9%85%8D%E7%BD%AEmaven/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-linux配置jdk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -919,81 +1006,6 @@
 
 
   
-    <article id="post-easyExcel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/19/easyExcel/">easyExcel</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/19/easyExcel/" class="archive-article-date">
-  	<time datetime="2021-04-19T07:00:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-19</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Java解析、生成Excel比较有名的框架有Apache poi、jxl。但他们都存在一个严重的问题就是非常的耗内存，poi有一套SAX模式的API可以一定程度的解决一些内存溢出的问题，但POI还是有一些缺陷，比如07版Excel解压缩以及解压后存储都是在内存中完成的，内存消耗依然很大。easyexcel重写了poi对07版Excel的解析，能够原本一个3M的excel用POI sax依然需要100M左右内存降低到几M，并且再大的excel不会出现内存溢出，03版依赖POI的sax模式。在上层做了模型转换的封装，让使用者更加简单方便</p>
-<h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><h3 id="先来编写-“写入”-的操作"><a href="#先来编写-“写入”-的操作" class="headerlink" title="先来编写 “写入” 的操作"></a>先来编写 “写入” 的操作</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">easyExcel</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/19/easyExcel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1128,7 +1140,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1140,15 +1152,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MybatisPlus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">VM</a>
+                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
+                <a href="javascript:void(0)" class="js-tag color3">VM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1160,10 +1176,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">babel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">canal</a>
               </li>
              
@@ -1172,11 +1184,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1188,15 +1208,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1209,10 +1225,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1236,11 +1248,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">api</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
             
             <div class="clearfix"></div>
