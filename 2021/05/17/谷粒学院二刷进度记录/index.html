@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>nginx搭建html | Sakura</title>
+  <title>谷粒学院二刷进度记录 | Sakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先进入nginx容器内部，使用ls命令进行查看可以查看到关键的四个配置路径   docker exec -it nginx_01 bash   镜像中nginx.conf配置文件路径   &#x2F;etc&#x2F;nginx&#x2F;nginx.conf    default.conf配置文件的路径   &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf   默认首页文件夹html路径">
+  <meta name="description" content="day1:2021&#x2F;5&#x2F;17 整合swagger、nacos、redis、feign、hystrix、nginx，完成common该module，内含工具、统一json格式、错误处理、错误定义、配置类，开始开发讲师模块，完成讲师添加、逻辑删除、查询全部讲师">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx搭建html">
-<meta property="og:url" content="http://example.com/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/index.html">
+<meta property="og:title" content="谷粒学院二刷进度记录">
+<meta property="og:url" content="http://example.com/2021/05/17/%E8%B0%B7%E7%B2%92%E5%AD%A6%E9%99%A2%E4%BA%8C%E5%88%B7%E8%BF%9B%E5%BA%A6%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Sakura">
-<meta property="og:description" content="先进入nginx容器内部，使用ls命令进行查看可以查看到关键的四个配置路径   docker exec -it nginx_01 bash   镜像中nginx.conf配置文件路径   &#x2F;etc&#x2F;nginx&#x2F;nginx.conf    default.conf配置文件的路径   &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;default.conf   默认首页文件夹html路径">
+<meta property="og:description" content="day1:2021&#x2F;5&#x2F;17 整合swagger、nacos、redis、feign、hystrix、nginx，完成common该module，内含工具、统一json格式、错误处理、错误定义、配置类，开始开发讲师模块，完成讲师添加、逻辑删除、查询全部讲师">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-04-21T06:11:51.000Z">
-<meta property="article:modified_time" content="2021-04-21T06:37:50.101Z">
+<meta property="article:published_time" content="2021-05-17T15:17:11.000Z">
+<meta property="article:modified_time" content="2021-05-17T15:21:39.404Z">
 <meta property="article:author" content="JF Xia">
-<meta property="article:tag" content="nginx">
+<meta property="article:tag" content="guli">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Sakura" type="application/atom+xml">
@@ -173,87 +173,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nginx搭建html" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-谷粒学院二刷进度记录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      nginx搭建html
+      谷粒学院二刷进度记录
     </h1>
   
 
         
-        <a href="/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/" class="archive-article-date">
-  	<time datetime="2021-04-21T06:11:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
+        <a href="/2021/05/17/%E8%B0%B7%E7%B2%92%E5%AD%A6%E9%99%A2%E4%BA%8C%E5%88%B7%E8%BF%9B%E5%BA%A6%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2021-05-17T15:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-17</time>
 </a>
         
       </header>    
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>先进入nginx容器内部，使用ls命令进行查看可以查看到关键的四个配置路径</p>
-<ul>
-<li><code> docker exec -it nginx_01 bash</code></li>
-</ul>
-</li>
-<li><p>镜像中nginx.conf配置文件路径</p>
-<ul>
-<li><code> /etc/nginx/nginx.conf</code></li>
-</ul>
-</li>
-<li><p> default.conf配置文件的路径</p>
-</li>
-<li><p><code> /etc/nginx/conf.d/default.conf</code></p>
-</li>
-<li><p> 默认首页文件夹html路径</p>
-</li>
-</ul>
-  <span id="more"></span>
-
-<ul>
-<li><p> <code>/usr/share/nginx/html</code></p>
-</li>
-<li><p>日志文件路径</p>
-<ul>
-<li><code>/var/log/nginx</code></li>
-</ul>
-</li>
-<li><p> 知道这四个关键路径后，退出容器</p>
-</li>
-<li><p><code> exit</code></p>
-</li>
-<li><p> 由于进入容器后不能进行vi操作编辑这些配置文件，所以回到主目录后，创建这四个文件夹</p>
-</li>
-<li><p><code> mkdir -p /nginx/&#123;conf,conf.d,html,logs&#125;</code></p>
-</li>
-<li><p>将nginx容器里的nginx.conf拷贝到刚创建的conf文件夹中</p>
-<ul>
-<li><code> docker cp nginx_01:/etc/nginx/nginx.conf /nginx/conf/nginx.conf</code></li>
-</ul>
-</li>
-<li><p>将nginx容器里的default.conf拷贝到刚创建的conf.d文件夹中</p>
-<ul>
-<li><code> docker cp nginx_01:/etc/nginx/conf.d/default.conf /nginx/conf.d/default.conf</code></li>
-</ul>
-</li>
-<li><p>编写html，放入到/nginx/html中</p>
-</li>
-<li><p>停止nginx_01，并进行移除</p>
-<ul>
-<li><code> docker stop nginx_01</code></li>
-<li><code> docker rm nginx_01</code></li>
-</ul>
-</li>
-<li><p>重新创建nginx容器，并使用-v进行挂载这四个关键路径</p>
-<ul>
-<li><code> docker run --name nginx_01 -d -p 80:80 -v /nginx/html:/usr/share/nginx/html -v /nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -v /nginx/logs:/var/log/nginx nginx</code></li>
-</ul>
-</li>
-<li><p>在linux端使用<code> curl localhost</code>命令查看网页，可以看到内容为你编写的html，搭建成功</p>
-</li>
+        <h5 id="day1-2021-5-17"><a href="#day1-2021-5-17" class="headerlink" title="day1:2021/5/17"></a>day1:2021/5/17</h5><ul>
+<li>整合swagger、nacos、redis、feign、hystrix、nginx，完成common该module，内含工具、统一json格式、错误处理、错误定义、配置类，开始开发讲师模块，完成讲师添加、逻辑删除、查询全部讲师</li>
 </ul>
 
       
@@ -299,7 +240,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">guli</a>
         		</li>
       		
 		</ul>
@@ -355,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/17/%E8%B0%B7%E7%B2%92%E5%AD%A6%E9%99%A2%E4%BA%8C%E5%88%B7%E8%BF%9B%E5%BA%A6%E8%AE%B0%E5%BD%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -369,18 +310,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/04/27/nacos%E5%92%8Cfeign%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          nacos和feign的使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/04/19/easyExcel/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">easyExcel</div>
+    <a href="/2021/05/15/jenkins/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jenkins</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +339,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#day1-2021-5-17"><span class="toc-number">1.</span> <span class="toc-text">day1:2021&#x2F;5&#x2F;17</span></a></li></ol>
                     </div>
                 </span>
             </div>

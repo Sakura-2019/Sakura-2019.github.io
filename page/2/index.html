@@ -62,10 +62,10 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 47
+    		总文章数 49
 		</nav>
 		<nav>
-			总字数 <span class="post-count">16.3k</span>
+			总字数 <span class="post-count">17.0k</span>
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -171,6 +171,175 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-nacos和feign的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/27/nacos%E5%92%8Cfeign%E7%9A%84%E4%BD%BF%E7%94%A8/">nacos和feign的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/27/nacos%E5%92%8Cfeign%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-04-27T12:43:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-27</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="nacos是服务注册中心，相当于中介，把服务注册进来，feign则负责两个微服务模块之间的调用。比如我现在有两个微服务模块，edu想要调用vod中的方法。"><a href="#nacos是服务注册中心，相当于中介，把服务注册进来，feign则负责两个微服务模块之间的调用。比如我现在有两个微服务模块，edu想要调用vod中的方法。" class="headerlink" title="nacos是服务注册中心，相当于中介，把服务注册进来，feign则负责两个微服务模块之间的调用。比如我现在有两个微服务模块，edu想要调用vod中的方法。"></a>nacos是服务注册中心，相当于中介，把服务注册进来，feign则负责两个微服务模块之间的调用。比如我现在有两个微服务模块，edu想要调用vod中的方法。</h4><h5 id="使用步骤大概为：启动服务-gt-添加pom依赖-gt-配置文件-gt-修改启动类-gt-创建client接口-gt-注入client接口-gt-调用"><a href="#使用步骤大概为：启动服务-gt-添加pom依赖-gt-配置文件-gt-修改启动类-gt-创建client接口-gt-注入client接口-gt-调用" class="headerlink" title="使用步骤大概为：启动服务-&gt;添加pom依赖-&gt;配置文件-&gt;修改启动类-&gt;创建client接口-&gt;注入client接口-&gt;调用"></a>使用步骤大概为：启动服务-&gt;添加pom依赖-&gt;配置文件-&gt;修改启动类-&gt;创建client接口-&gt;注入client接口-&gt;调用</h5><ul>
+<li><p>启动nacos服务:start.cmd，localhost:8848/nacos可以访问nacos主页，用户名密码都是nacos</p>
+</li>
+<li><p>pom中添加依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--nacos服务注册--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--feign服务调用--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-openfeign<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">springcloud</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/27/nacos%E5%92%8Cfeign%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx搭建html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/">nginx搭建html</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/" class="archive-article-date">
+  	<time datetime="2021-04-21T06:11:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
+</a>
+        
+      </header>    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>先进入nginx容器内部，使用ls命令进行查看可以查看到关键的四个配置路径</p>
+<ul>
+<li><code> docker exec -it nginx_01 bash</code></li>
+</ul>
+</li>
+<li><p>镜像中nginx.conf配置文件路径</p>
+<ul>
+<li><code> /etc/nginx/nginx.conf</code></li>
+</ul>
+</li>
+<li><p> default.conf配置文件的路径</p>
+</li>
+<li><p><code> /etc/nginx/conf.d/default.conf</code></p>
+</li>
+<li><p> 默认首页文件夹html路径</p>
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+     
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/21/nginx%E6%90%AD%E5%BB%BAhtml/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-easyExcel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -791,174 +960,6 @@
 
 
   
-    <article id="post-babel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/31/babel/">babel</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/31/babel/" class="archive-article-date">
-  	<time datetime="2021-03-31T13:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-31</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="我们用es6的语法写js文件时，使用node-js并不能直接运行js文件，这时候就需要用babel将es6转换为es5，使用node-xx-js才可以运行js文件"><a href="#我们用es6的语法写js文件时，使用node-js并不能直接运行js文件，这时候就需要用babel将es6转换为es5，使用node-xx-js才可以运行js文件" class="headerlink" title="我们用es6的语法写js文件时，使用node.js并不能直接运行js文件，这时候就需要用babel将es6转换为es5，使用node xx.js才可以运行js文件"></a>我们用es6的语法写js文件时，使用node.js并不能直接运行js文件，这时候就需要用babel将es6转换为es5，使用node xx.js才可以运行js文件</h3><ul>
-<li><p>建立一个module1文件夹，里面创建01.js和02.js，里面存放es6的语法</p>
-<p>01.js。export表示该方法可以被其他js调用。</p>
-<blockquote>
-<p>export function getList(){</p>
-<p>  console.log(“getLitst……”)</p>
-<p>}</p>
-<p>export function save(){</p>
-<p>  console.log(“save…..”)</p>
-<p>}</p>
-</blockquote>
-<p>02.js。使用import将01.js引入进来，然后进行调用</p>
-<blockquote>
-<p>import {getList,save} from ‘./01.js’</p>
-<p>getList()</p>
-<p>save()</p>
-</blockquote>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">babel</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/31/babel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios示例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/29/axios%E7%A4%BA%E4%BE%8B/">axios示例</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/29/axios%E7%A4%BA%E4%BE%8B/" class="archive-article-date">
-  	<time datetime="2021-03-29T15:02:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
-</a>
-        
-      </header>    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>自定义json数据</p>
-<p><img src="https://gitee.com/Sakura-2019/img_mark/raw/7722073917a9e374e45e9e5247d6dc0b7e859aa2/20210329-2.png" alt="alt pic"></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-     
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/29/axios%E7%A4%BA%E4%BE%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1093,19 +1094,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JWT</a>
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1141,6 +1138,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">springcloud</a>
               </li>
              
@@ -1149,11 +1150,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">easyExcel</a>
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1165,10 +1174,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
@@ -1177,7 +1182,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">swagger</a>
+                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1185,11 +1190,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CRUD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color3">swagger</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1197,7 +1198,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1205,7 +1206,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">guli</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>
